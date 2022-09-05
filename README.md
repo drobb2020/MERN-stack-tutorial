@@ -77,7 +77,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-This is the first part of a two part tutorial from the Net Ninja on YouTube. The first part covers creating the API backend connected to a Mongo database, with a React frontend. 
+This is the first part of a two part tutorial from the Net Ninja on YouTube. The first part covers creating the API backend connected to a Mongo database, with a React frontend.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -85,10 +85,10 @@ This is the first part of a two part tutorial from the Net Ninja on YouTube. The
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [Express](https://nextjs.org/)
 * [MongoDB](https://www.mongodb.com/cloud/atlas/lp/try4?utm_source=bing&utm_campaign=mdb_bs_americas_canada_search_core_brand_atlas_desktop&utm_term=mongodb&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=415204512&adgroup=1212761794897237&msclkid=4d10062d94171b98d32a653bd814cbc6)
-* [Node.js](https://nodejs.org/en/)
+* [Express](https://nextjs.org/)
 * [React.js](https://reactjs.org/)
+* [Node.js](https://nodejs.org/en/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -139,11 +139,14 @@ Install or update npm:
 #### Frontend Configuration
 
 1. cd out of the backend folder and run the following command:
+
   ```sh
   npx create-react-app frontend
   ```
+
 2. This will create a frontend folder and populate it with the default React framework.
 3. cd into the frontend folder and use the command:
+
    ```sh
    npm start
    ```
@@ -151,6 +154,7 @@ Install or update npm:
 4. This will start the react application.
 
 ### Clone this repository
+
 1. If you wish you can clone this repository to get started.
 
    ```sh
