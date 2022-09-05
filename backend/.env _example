@@ -1,0 +1,2 @@
+PORT=4000 or which ever port you prefer to use
+MONGO_URI="Your MongoDB URI with admin and password"

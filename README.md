@@ -26,7 +26,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/drobb2020/drobb-README-template">
+  <a href="https://github.com/drobb2020/MERN-stack-tutorial">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -35,14 +35,14 @@
   <p align="center">
     This is a MERN stack application demonstrating a basic express API backend and a React frontend.
     <br />
-    <a href="https://github.com/drobb2020/drobb-README-template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/drobb2020/MERN-stack-tutorial"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/drobb2020/drobb-README-template">View Demo</a>
+    <a href="https://github.com/drobb2020/MERN-stack-tutorial">View Demo</a>
     ·
-    <a href="https://github.com/drobb2020/drobb-README-template/issues">Report Bug</a>
+    <a href="https://github.com/drobb2020/MERN-stack-tutorial/issues">Report Bug</a>
     ·
-    <a href="https://github.com/drobb2020/drobb-README-template/issues">Request Feature</a>
+    <a href="https://github.com/drobb2020/MERN-stack-tutorial/issues">Request Feature</a>
   </p>
 </div>
 
@@ -77,16 +77,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
+This is the first part of a two part tutorial from the Net Ninja on YouTube. The first part covers creating the API backend connected to a Mongo database, with a React frontend. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -94,25 +85,27 @@ Use the `BLANK_README.md` to get started.
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [Next.js](https://nextjs.org/)
+* [Express](https://nextjs.org/)
+* [MongoDB](https://www.mongodb.com/cloud/atlas/lp/try4?utm_source=bing&utm_campaign=mdb_bs_americas_canada_search_core_brand_atlas_desktop&utm_term=mongodb&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=415204512&adgroup=1212761794897237&msclkid=4d10062d94171b98d32a653bd814cbc6)
+* [Node.js](https://nodejs.org/en/)
 * [React.js](https://reactjs.org/)
-* [Python](https://python.org)
-* [Django](https://www.djangoproject.com/)
-* [Flask](https://flask.palletsprojects.com/en/2.0.x/)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+You must have node.js installed on your machine to get started with this project. Along with node.js, you will also need npm.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+Install or upgrade node.js:
+
+1. Visit [https://nodejs.org/](https://nodejs.org).
+2. It is recommended to download the latest LTS version of node for more users.
+3. Follow the installation instructions provided by node.js.
+
+Install or update npm:
 
 * npm
 
@@ -122,47 +115,74 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+#### Backend Configuration
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Create a base directory for the entire project. This can be named whatever you like. In my case I named it MERN-stack-tutorial
+2. In the directory create an additional folder named backend.
+3. cd into the backend folder.
+4. run npm init -y to create a package.json file.
+5. Install the following packages using npm:
 
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+  ```sh
+   npm install express dotenv mongoose
+   npm install -D nodemon
    ```
 
-3. Install NPM packages
+6. Add the following line to the scripts section of your package.json:
+
+  ```json
+  "dev": "nodemon server.js", 
+  ```
+
+7. The backend is now ready for development. Follow the video series on [YouTube](https://www.youtube.com/playlist?list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE) to complete the project.
+
+#### Frontend Configuration
+
+1. cd out of the backend folder and run the following command:
+  ```sh
+  npx create-react-app frontend
+  ```
+2. This will create a frontend folder and populate it with the default React framework.
+3. cd into the frontend folder and use the command:
+   ```sh
+   npm start
+   ```
+
+4. This will start the react application.
+
+### Clone this repository
+1. If you wish you can clone this repository to get started.
+
+   ```sh
+   git clone https://github.com/drobb2020/MERN-stack-tutorial.git
+   ```
+
+2. cd into the backend folder and install NPM packages
 
    ```sh
    npm install
    ```
 
-4. Enter your API in `config.js`
-
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+3. You will need to visit MongoDB Atlas to create and connect your own database.
+4. See the file .env_example to configure you Mongo uri and the port the backend will listen on.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+As a tutorial this project was useful in developing my express and react skills. I have done several Net Ninja courses and he is one of the best teachers around for this topic. Please check out his channel on [YouTube](https://www.youtube.com/c/TheNetNinja).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- ROADMAP -->
 ## Roadmap
 
-* [X] Add Changelog
-* [X] Add back to top links
-* [ ] Add Additional Templates w/ Examples
-* [ ] Add "components" document to easily copy & paste sections of the readme
+* [X] Completed the first video series.
+* [ ] Continue with the second part of the series [here](https://www.youtube.com/playlist?list=PL4cUxeGkcC9g8OhpOZxNdhXggFz2lOuCT).
+* [ ] Go Live with a demonstration website
 
-See the [open issues](https://github.com/drobb2020/drobb-README-template/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/drobb2020/MERN-stack-tutorial/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -194,14 +214,16 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Your Name - [@davidrobb2](https://twitter.com/davidrobb2) - drobb2011@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/drobb2020/repo_name)
+Project Link: [https://github.com/your_username/repo_name](https://github.com/drobb2020/MERN-stack-tutorial)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+As Always this would not be possible without the great teaching skills of The Net Ninja.
+
+Here are some other useful links:
 
 * [Choose an Open Source License](https://choosealicense.com)
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
@@ -209,23 +231,22 @@ Use this space to list resources you find helpful and would like to give credit 
 * [Malven's Grid Cheatsheet](https://grid.malven.co/)
 * [Img Shields](https://shields.io)
 * [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
 * [React Icons](https://react-icons.github.io/react-icons/search)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/drobb2020/drobb-README-template.svg?style=for-the-badge
-[contributors-url]: https://github.com/drobb2020/drobb-README-template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/drobb2020/drobb-README-template.svg?style=for-the-badge
-[forks-url]: https://github.com/drobb2020/drobb-README-template/network/members
-[stars-shield]: https://img.shields.io/github/stars/drobb2020/drobb-README-template.svg?style=for-the-badge
-[stars-url]: https://github.com/drobb2020/drobb-README-template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/drobb2020/drobb-README-template.svg?style=for-the-badge
-[issues-url]: https://github.com/drobb2020/drobb-README-template/issues
-[license-shield]: https://img.shields.io/github/license/drobb2020/drobb-README-template.svg?style=for-the-badge
-[license-url]: https://github.com/drobb2020/drobb-README-template/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/drobb2020/MERN-stack-tutorial.svg?style=for-the-badge
+[contributors-url]: https://github.com/drobb2020/MERN-stack-tutorial/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/drobb2020/MERN-stack-tutorial.svg?style=for-the-badge
+[forks-url]: https://github.com/drobb2020/MERN-stack-tutorial/network/members
+[stars-shield]: https://img.shields.io/github/stars/drobb2020/MERN-stack-tutorial.svg?style=for-the-badge
+[stars-url]: https://github.com/drobb2020/MERN-stack-tutorial/stargazers
+[issues-shield]: https://img.shields.io/github/issues/drobb2020/MERN-stack-tutorial.svg?style=for-the-badge
+[issues-url]: https://github.com/drobb2020/MERN-stack-tutorial/issues
+[license-shield]: https://img.shields.io/github/license/drobb2020/MERN-stack-tutorial.svg?style=for-the-badge
+[license-url]: https://github.com/drobb2020/MERN-stack-tutorial/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
